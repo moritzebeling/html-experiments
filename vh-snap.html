@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>Viewport Height & Snap Scroll</title>
+    <meta name="description" content="Real viewport height accross all devices">
+    <link href="css/reset.css" rel="stylesheet">
+    <style>
+      body {
+        background-color: #000;
+        color: #fff;
+        /* scroll-snap-type: y mandatory; */
+        scroll-snap-type: y proximity;
+      }
+      section {
+        height: 100vh;
+        padding: 2rem;
+        scroll-snap-align: start;
+        background-color: #00f;
+      }
+      section:nth-child(even){
+        background-color: #f00;
+      }
+      section.last {
+        height: 300vh;
+      }
+      div {
+        background-color: #fff;
+        height: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <section><div></div></section>
+    <section><div></div></section>
+    <section><div></div></section>
+    <section><div></div></section>
+    <section class="last"><div></div></section>
+
+  </body>
+
+</html>
