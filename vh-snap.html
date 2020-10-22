@@ -16,32 +16,59 @@
         scroll-snap-type: y proximity;
       }
       section {
-        padding: 2rem;
-        scroll-snap-align: start;
+        scroll-snap-align: start end;
         background-color: #00f;
+        height: 100vh;
+        height: -moz-available;
+        height: -webkit-fill-available;
+        height: fill-available;
+        position: relative;
       }
       section:nth-child(even){
         background-color: #f00;
       }
-      section.last {
-        height: 300vh;
-      }
       div {
+        padding: 2rem;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+      }
+      p {
         background-color: #fff;
-        height: -moz-available;
-        height: -webkit-fill-available;
-        height: fill-available;
+        height: 100%;
+        min-height: 2rem;
+      }
+      section.last {
+        height: auto;
+        position: static;
+      }
+      section.last div {
+        position: static;
+        height: auto;
+      }
+      section.last p {
+        height: 300vh;
       }
     </style>
   </head>
 
   <body>
 
-    <section><div></div></section>
-    <section><div></div></section>
-    <section><div></div></section>
-    <section><div></div></section>
-    <section class="last"><div></div></section>
+    <section>
+      <div><p></p></div>
+    </section>
+    <section>
+      <div><p></p></div>
+    </section>
+    <section>
+      <div><p></p></div>
+    </section>
+    <section>
+      <div><p></p></div>
+    </section>
+    <section class="last">
+      <div><p></p></div>
+    </section>
 
   </body>
 
