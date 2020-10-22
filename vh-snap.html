@@ -16,7 +16,6 @@
         scroll-snap-type: y proximity;
       }
       section {
-        height: 100vh;
         padding: 2rem;
         scroll-snap-align: start;
         background-color: #00f;
@@ -29,7 +28,9 @@
       }
       div {
         background-color: #fff;
-        height: 100%;
+        height: -moz-available;
+        height: -webkit-fill-available;
+        height: fill-available;
       }
     </style>
   </head>
